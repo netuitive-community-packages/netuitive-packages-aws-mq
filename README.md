@@ -1,10 +1,13 @@
-[![Build Status](https://travis-ci.org/netuitive-community-packages/netuitive-packages-aws-mq.svg?branch=master)](https://travis-ci.org/netuitive-community-packages/netuitive-packages-aws-mq)
-# netuitive.packages.aws.mq
+![Netuitive](http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png)
 
-For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
+# Netuitive AWS MQ Package [![Build Status](https://travis-ci.org/netuitive-community-packages/netuitive-packages-aws-mq.svg?branch=master)](https://travis-ci.org/netuitive-community-packages/netuitive-packages-aws-mq)
 
-## Release History
+> For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
-### Version 1.0.0
+A set of Netuitive analytics configurations, polices, and dashboards that are used to monitor performance of Amazon MQ brokers.
 
-* Initial production release of the package for monitoring Amazon MQ resources.
+## Installing / Getting started
+
+## Developing
+
+## Components
