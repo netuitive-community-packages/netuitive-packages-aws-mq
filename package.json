@@ -1,0 +1,46 @@
+{
+  "id" : "netuitive.packages.aws.mq",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages AWS MQ",
+    "description" : "A set of Netuitive analytics configurations, polices, and dashboards that are used to monitor performance of Amazon MQ brokers.",
+    "author" : {
+      "name" : "Netuitive Research",
+      "email" : "research@netuitive.com"
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-aws-mq/archive/master.zip"
+    },
+    "compatibility" : [ "AWS:MQ" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/aws.mq.-.broker.falling.behind.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-amazon.mq.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/aws.mq.details.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/aws.mq.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}
