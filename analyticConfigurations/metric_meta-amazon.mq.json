@@ -1,65 +1,71 @@
 {
-  "analyticConfiguration" : {
-    "type" : "METRIC_META",
-    "name" : "AWS MQ",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "MQ",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws\\.amazonmq\\.cpucreditbalance",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\..+count",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\.cpuutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          }
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\.heapusage",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          }
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\.enqueuetime",
+        "properties": {
+          "tags": {
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\.networkin",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\.networkout",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws\\.amazonmq\\.memoryusage",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          }
+        }
+      }
+    ],
+    "name": "AWS MQ",
+    "scope": {
+      "elementType": "MQ"
     },
-    "metrics" : [ {
-      "match" : "aws\\.amazonmq\\.cpucreditbalance",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "aws\\.amazonmq\\..+count",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    },{
-      "match" : "aws\\.amazonmq\\.cpuutilization",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        }
-      }
-    }, {
-      "match" : "aws\\.amazonmq\\.heapusage",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        }
-      }
-    }, {
-      "match" : "aws\\.amazonmq\\.enqueuetime",
-      "properties" : {
-        "tags" : {
-          "unit" : "ms"
-        }
-      }
-    }, {
-      "match" : "aws\\.amazonmq\\.networkin",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws\\.amazonmq\\.networkout",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws\\.amazonmq\\.memoryusage",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

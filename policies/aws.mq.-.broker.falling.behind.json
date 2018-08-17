@@ -1,38 +1,26 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS MQ - Broker Falling Behind",
-    "description" : "The enqueued count for the broker has been greater than the dequeued count for at least 2 hours.  This is an indication that processing of the queues is falling behind.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "MQ",
-      "elementTags" : { }
-    },
-    "duration" : 7200,
-    "conditions" : [ {
-      "metric" : "aws.amazonmq.enqueuecount",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : "aws.amazonmq.dequeuecount",
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "metric": "aws.amazonmq.enqueuecount",
+        "metricThresholdLevel": "aws.amazonmq.dequeuecount",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The enqueued count for the broker has been greater than the dequeued count for at least 2 hours.  This is an indication that processing of the queues is falling behind.",
+    "duration": 7200,
+    "enabled": true,
+    "name": "AWS MQ - Broker Falling Behind",
+    "scope": {
+      "elementType": "MQ"
+    }
   }
 }
